@@ -54,7 +54,7 @@ public class Zaznam
     {
         if (Node == null)
         {
-            Console.WriteLine("Zaznamy nejsou k dispozici.");
+            
         }
 
         if (Node.Next != null)
@@ -97,9 +97,6 @@ public class Zaznam
         }
 
         Console.WriteLine($"Datum: {Node.Value.Datum:d}\n");
-        foreach (var text in Node.Value.Text)
-        {
-            Console.Write($"{text}");
-        }
+        Console.WriteLine($"{Node.Value.Text}");
     }
 }

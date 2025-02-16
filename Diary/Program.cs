@@ -33,17 +33,17 @@ bool ukazZaznam = false;
 while (true)
 {
     VytiskniMenu();
-    Console.WriteLine($"Pocet zaznamu: {pocetZaznamu}\n");
+    Console.WriteLine($"Počet záznamů: {pocetZaznamu}");
+    Console.WriteLine();
     if (ukazZaznam)
     {
         if (zaznam != null)
         {
             zaznam.ZobrazAktualniZaznam();
-            Console.WriteLine();
             Console.WriteLine("-------------------------------------------------------\n");
         }
     }
-
+    Console.Write("Zadej příkaz:");
     string vstup = Console.ReadLine().Trim().ToLower();
 
 
@@ -81,7 +81,7 @@ while (true)
             if (line.Trim().ToLower() == uloz) break;
 
             // prida text do promene text
-            text.Append(line);
+            text.Append(line + "\n");
         }
 
         zaznam.PridejZaznam(datum, text.ToString());
@@ -99,6 +99,8 @@ while (true)
     {
         Console.Clear();
         VytiskniMenu();
+        zaznam.ZobrazAktualniZaznam();
+        Console.WriteLine("-------------------------------------------------------\n");
         Console.WriteLine($"\nPro odstranění tohoto záznamu stiskni \"a\", pro zrušení jiný znak.");
         char znakProPotvrzeni = Console.ReadKey().KeyChar;
         if (znakProPotvrzeni == 'a')
