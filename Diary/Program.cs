@@ -5,13 +5,14 @@ using Diary;
 
 Zaznam zaznam = new Zaznam();
 
-
+// inicializace promenych textu
 string prechozi = "predchozi";
 string dalsi = "dalsi";
 string novy = "novy";
 string uloz = "uloz";
 string smaz = "smaz";
 string zavri = "zavri";
+
 int pocetZaznamu = 0;
 bool ukazZaznam = false;
 

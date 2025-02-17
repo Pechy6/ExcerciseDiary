@@ -21,6 +21,11 @@ public class Zaznam
     {
     }
 
+    /// <summary>
+    /// Přidává záznam do listu
+    /// </summary>
+    /// <param name="datum">Datum zaznamu</param>
+    /// <param name="text">Text zaznamu</param>
     public void PridejZaznam(DateTime datum, string text)
     {
         var novyZaznam = new Zaznam(datum, text);
@@ -32,6 +37,9 @@ public class Zaznam
         }
     }
 
+    /// <summary>
+    /// Odstraňuje aktuální záznam z listu a nastavuje následující nebo předchozí uzel jako aktuální.
+    /// </summary>
     public void VymazZaznam()
     {
         if (Node == null)
@@ -50,6 +58,9 @@ public class Zaznam
         Node = dalsiNode;
     }
 
+    /// <summary>
+    /// Nastavuje následující záznam v seznamu jako aktuální, pokud existuje, a vypisuje jeho obsah.
+    /// </summary>
     public void DalsiZaznam()
     {
         if (Node == null)
@@ -65,6 +76,9 @@ public class Zaznam
         }
     }
 
+    /// <summary>
+    /// Nastavuje předchozí záznam v seznamu jako aktuální, pokud existuje, a vypisuje jeho obsah.
+    /// </summary>
     public void PredchoziZaznam()
     {
         if (Node == null)
@@ -84,6 +98,9 @@ public class Zaznam
         }
     }
 
+    /// <summary>
+    /// Zobrazuje obsah aktuálního záznamu včetně data a textu.
+    /// </summary>
     public void ZobrazAktualniZaznam()
     {
         if (Node == null)
