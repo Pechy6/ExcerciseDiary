@@ -9,7 +9,7 @@ Projekt je implementován v jazyce **C# 13.0** a cílí na framework **.NET 9.0*
 - **Zobrazení aktuálního záznamu**: Tisk informace o aktuálním záznamu na konzoli prostřednictvím metody `ZobrazAktualniZaznam`.
 
 ## Použití
-Projekt je vhodný pro všechny, kteří hledají jednoduchý nástroj pro správu a ukládání textových záznamů do deníku. Představuje základní implementaci systému práce s deníkem, kterou lze dále rozšířit dle potřeb, například o uložení dat do souboru nebo databáze.
+Projekt je vytvořený jako cvičení Kolecke a Linq na webu IT Network. 
 ## Struktura třídy `Zaznam`
 ### Vlastnosti
 - `Datum`: Datum záznamu.
