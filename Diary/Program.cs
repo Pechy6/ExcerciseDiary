@@ -5,21 +5,6 @@ using Diary;
 
 Zaznam zaznam = new Zaznam();
 
-void VytiskniMenu()
-{
-    Console.Clear();
-
-    Console.WriteLine("-------------------------------------------------------");
-    Console.WriteLine("Deník se ovládá následujícími příkazy:");
-    Console.WriteLine("- predchozi: Přesunutí na předchozí záznam");
-    Console.WriteLine("- dalsi: Přesunutí na další záznam");
-    Console.WriteLine("- novy: Vytvoření nového záznamu");
-    Console.WriteLine("- uloz: Uložení vytvořeného záznamu");
-    Console.WriteLine("- smaz: Odstranění záznamu");
-    Console.WriteLine("- zavri: Zavření deníku");
-    Console.WriteLine("-------------------------------------------------------\n");
-}
-
 
 string prechozi = "predchozi";
 string dalsi = "dalsi";
@@ -33,17 +18,24 @@ bool ukazZaznam = false;
 while (true)
 {
     VytiskniMenu();
-    Console.WriteLine($"Počet záznamů: {pocetZaznamu}");
+    Console.WriteLine();
+    if (zaznam.Node != null)
+    {
+        Console.WriteLine($"Počet záznamů: {pocetZaznamu}");
+    }
+
     Console.WriteLine();
     if (ukazZaznam)
     {
-        if (zaznam != null)
+        if (zaznam.Node != null)
         {
             zaznam.ZobrazAktualniZaznam();
-            Console.WriteLine("-------------------------------------------------------\n");
+            Console.WriteLine("-------------------------------------------------------");
+            Console.WriteLine();
         }
     }
-    Console.Write("Zadej příkaz:");
+
+    Console.Write("Zadej příkaz: ");
     string vstup = Console.ReadLine().Trim().ToLower();
 
 
@@ -67,6 +59,7 @@ while (true)
     {
         Console.Clear();
         VytiskniMenu();
+        Console.WriteLine($"Počet záznamů: {pocetZaznamu}");
         DateTime datum;
         Console.Write($"Zadej datum: ");
         while (!DateTime.TryParse(Console.ReadLine(), out datum))
@@ -100,7 +93,11 @@ while (true)
         Console.Clear();
         VytiskniMenu();
         zaznam.ZobrazAktualniZaznam();
-        Console.WriteLine("-------------------------------------------------------\n");
+        if (zaznam.Node != null)
+        {
+            Console.WriteLine("-------------------------------------------------------\n");
+        }
+
         Console.WriteLine($"\nPro odstranění tohoto záznamu stiskni \"a\", pro zrušení jiný znak.");
         char znakProPotvrzeni = Console.ReadKey().KeyChar;
         if (znakProPotvrzeni == 'a')
@@ -114,4 +111,21 @@ while (true)
         else
             continue;
     }
+}
+
+return;
+
+void VytiskniMenu()
+{
+    Console.Clear();
+
+    Console.WriteLine("-------------------------------------------------------");
+    Console.WriteLine("Deník se ovládá následujícími příkazy:");
+    Console.WriteLine("- predchozi: Přesunutí na předchozí záznam");
+    Console.WriteLine("- dalsi: Přesunutí na další záznam");
+    Console.WriteLine("- novy: Vytvoření nového záznamu");
+    Console.WriteLine("- uloz: Uložení vytvořeného záznamu");
+    Console.WriteLine("- smaz: Odstranění záznamu");
+    Console.WriteLine("- zavri: Zavření deníku");
+    Console.WriteLine("-------------------------------------------------------");
 }

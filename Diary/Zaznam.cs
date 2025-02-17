@@ -36,7 +36,7 @@ public class Zaznam
     {
         if (Node == null)
         {
-            Console.WriteLine("Zaznamy nejsou k dispozici.");
+            // Console.WriteLine("Zaznamy nejsou k dispozici.");
             return;
         }
 
@@ -63,17 +63,13 @@ public class Zaznam
             Console.WriteLine($"Datum: {Node.Value.Datum}");
             Console.WriteLine($"Text: {Node.Value.Text}");
         }
-        else
-        {
-            Console.WriteLine("Nebyl nalezen dalsi zaznam.");
-        }
     }
 
     public void PredchoziZaznam()
     {
         if (Node == null)
         {
-            Console.WriteLine("Zaznamy nejsou k dispozici.");
+            // Console.WriteLine("Zaznamy nejsou k dispozici.");
         }
 
         if (Node.Previous != null)
@@ -92,7 +88,7 @@ public class Zaznam
     {
         if (Node == null)
         {
-            Console.WriteLine("Zaznamy nejsou k dispozici.");
+            // Console.WriteLine("Zaznamy nejsou k dispozici.");
             return;
         }
 
