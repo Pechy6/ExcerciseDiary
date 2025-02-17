@@ -10,6 +10,8 @@ Projekt je implementován v jazyce **C# 13.0** a cílí na framework **.NET 9.0*
 
 ## Použití
 Projekt je vytvořený jako cvičení Kolecke a Linq na webu IT Network. 
+Zde je odkaz na kurz :[Kolekce a Linq](https://www.itnetwork.cz/csharp/kolekce-a-linq/c-sharp-tutorial-uvod-do-kolekci-a-genericita) pro více informací.
+
 ## Struktura třídy `Zaznam`
 ### Vlastnosti
 - `Datum`: Datum záznamu.
